@@ -1,0 +1,38 @@
+html {
+  min-height: 100%; margin:0; padding:0;
+}
+
+body {
+  margin: 0px;
+  color: cyan;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../img/rreplaylogo475.jpg');
+  background-position: right top;
+  background-color: #000003;
+  font-family: 'Open Sans', "Helvetica", sans-serif;
+}
+
+A:link {text-decoration: none; color: #FF6600}
+A:visited {text-decoration: none; color: #FF6600}
+A:active {text-decoration: none; color: #FF6600}
+A:hover {text-decoration: underline; color: #FF9900}
+
+#contentdiv { 
+    padding:20px;
+    width:80%;
+    margin:auto;
+}
+
+#descriptdiv { font-size:x-large; }
+#descripspan { padding:0px 5px; 
+  background-image: url('../img/semisolidblack.png'); }
+#bandnamediv { padding:20px; font-size:xx-large; }
+.sectiondiv { font-size:medium; padding:25px 0px 10px 0px;}
+.albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
+.albumtitlespan { padding:0px 5px; font-style:italic; background: black; }
+.linksdiv { padding:5px 0px 0px 30px; }
+#biodiv { padding:20px; width:60%; margin-right:auto; }
+#personneldiv { padding:5px 0px; }
+.sectionheadspan { padding:0px 5px; color:black; background:cyan; }
+
