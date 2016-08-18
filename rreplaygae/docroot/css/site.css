@@ -27,12 +27,14 @@ A:hover {text-decoration: underline; color: #FF9900}
 #descriptdiv { font-size:x-large; }
 #descripspan { padding:0px 5px; 
   background-image: url('../img/semisolidblack.png'); }
-#bandnamediv { padding:20px; font-size:xx-large; }
+#bandnamediv { padding:20px; font-size:xx-large; font-weight:bold; }
 .sectiondiv { font-size:medium; padding:25px 0px 10px 0px;}
 .albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
 .albumtitlespan { padding:0px 5px; font-style:italic; background: black; }
 .linksdiv { padding:5px 0px 0px 30px; }
-#biodiv { padding:20px; width:60%; margin-right:auto; }
+#biodiv { padding:20px; width:60%; margin-right:auto; 
+  font-family: serif;
+}
 #personneldiv { padding:5px 0px; }
 .sectionheadspan { padding:0px 5px; color:black; background:cyan; }
 
