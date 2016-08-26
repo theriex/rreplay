@@ -49,10 +49,10 @@ var app = {},
 
 
     function displayContactInfo () {
-        var emaddr = "rreplay",
-            site = "way.net",
+        var emaddr = "band",
+            site = "rreplay.com",
             refs, html = [];
-        emaddr += "@" + site;
+        emaddr = emaddr + "@" + site;
         refs = [{text: "contact:"},
                 {text: " "},  //space breaker
                 {text: emaddr,
