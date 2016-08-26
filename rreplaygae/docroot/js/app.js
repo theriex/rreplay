@@ -79,11 +79,11 @@ var app = {},
 
 
     //Sometimes there's a significant lag loading the fonts, and if
-    //that is done in the index page then you are just sitting there
-    //waiting for the site to display.  That's annoying and looks bad.
-    //Need to avoid that problem, so load the fonts last.  This might
-    //cause a blink in the display, but it's worth it to not have that
-    //hideous lag occasionally.
+    //that happens the index page should not be waiting to display
+    //because that just makes the whole site look slow. To avoid that
+    //lag, load the fonts last.  If the fonts load fast, the update
+    //will be imperceptible.  If they load slow then at least the
+    //content will be available to read in the meantime.
     function addFontSupport () {
         var fontlink = document.createElement("link");
         fontlink.href = "http://fonts.googleapis.com/css?family=Oxygen";
