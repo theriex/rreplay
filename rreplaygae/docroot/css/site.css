@@ -13,14 +13,14 @@ body {
   font-family: 'Open Sans', "Helvetica", sans-serif;
 }
 
-A:link {text-decoration: none; color: #FF6600}
-A:visited {text-decoration: none; color: #FF6600}
-A:active {text-decoration: none; color: #FF6600}
-A:hover {text-decoration: underline; color: #FF9900}
+A:link {text-decoration: none; color: #FF6600; background:black;}
+A:visited {text-decoration: none; color: #FF6600; background:black;}
+A:active {text-decoration: none; color: #FF6600; background:black;}
+A:hover {text-decoration: underline; color: #FF9900; background:black;}
 
 #contentdiv { 
-    padding:20px;
-    width:80%;
+    padding:10px;
+    width:90%;
     margin:auto;
 }
 
@@ -30,8 +30,10 @@ A:hover {text-decoration: underline; color: #FF9900}
 #bandnamediv { padding:20px; font-size:xx-large; font-weight:bold; }
 .sectiondiv { font-size:medium; padding:25px 0px 10px 0px;}
 .albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
-.albumtitlespan { padding:0px 5px; font-style:italic; background: black; }
-.linksdiv { padding:5px 0px 0px 30px; }
+.albumtitlespan { font-style:italic; background: black; }
+.linksdiv { padding:5px 0px 0px 0px; }
+.featrackdiv { padding:10px 0px 0px 0px; }
+.trackaud { padding:15px 0px 0px 0px; }
 #biodiv { padding:20px; width:60%; margin-right:auto; 
   font-family: serif;
 }
