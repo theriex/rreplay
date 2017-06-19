@@ -10,7 +10,7 @@ body {
   background-image: url('../img/rreplaylogo475.jpg');
   background-position: right top;
   background-color: #000003;
-  font-family: 'Open Sans', "Helvetica", sans-serif;
+  font-family: "Averia Libre", "Open Sans", "Helvetica", sans-serif;
 }
 
 A:link {text-decoration: none; color: #FF6600; background:black;}
@@ -27,10 +27,12 @@ A:hover {text-decoration: underline; color: #FF9900; background:black;}
 #descriptdiv { font-size:x-large; }
 #descripspan { padding:0px 5px; 
   background-image: url('../img/semisolidblack.png'); }
-#bandnamediv { padding:20px; font-size:xx-large; font-weight:bold; }
+#bandnamediv { padding:20px; font-size:xx-large; font-weight:bold;
+  font-family: "Open Sans", "Helvetica", sans-serif; }
 .sectiondiv { font-size:medium; padding:25px 0px 10px 0px;}
 .albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
-.albumtitlespan { font-style:italic; background: black; }
+.albumtitlespan { font-style:italic; background: black;
+  font-family: "Open Sans", "Helvetica", sans-serif; }
 .linksdiv { padding:5px 0px 0px 0px; }
 .featrackdiv { padding:10px 0px 0px 0px; }
 .trackaud { padding:15px 0px 0px 0px; }

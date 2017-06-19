@@ -86,7 +86,7 @@ var app = {},
     //content will be available to read in the meantime.
     function addFontSupport () {
         var fontlink = document.createElement("link");
-        fontlink.href = "http://fonts.googleapis.com/css?family=Oxygen";
+        fontlink.href = "http://fonts.googleapis.com/css?family=Averia+Libre";
         fontlink.rel = "stylesheet";
         fontlink.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(fontlink);
