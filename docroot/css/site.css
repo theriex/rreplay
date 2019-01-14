@@ -24,8 +24,15 @@ A:hover {text-decoration: underline; color: #FF9900; background:black;}
     margin:auto;
 }
 
+.albumdiv { display:table; }
+.albumcontentdiv { display:table-row; }
+.coverdiv { display:table-cell; width:150px; height:150px; }
+.coverdiv img { width:150px; height:150px; }
+.albdetdiv { display:table-cell; padding-left:10px; }
+.strownspan { font-weight:bold; font-style:italic; }
+
 #descriptdiv { font-size:x-large; }
-#descripspan { padding:0px 5px; 
+#descripspan { padding:0px 5px; font-size:medium; 
   background-image: url('../img/semisolidblack.png'); }
 #bandnamediv { padding:20px; font-size:xx-large; font-weight:bold;
   font-family: "Open Sans", "Helvetica", sans-serif; }
