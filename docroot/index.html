@@ -41,27 +41,6 @@
         [<a href="https://www.youtube.com/playlist?list=PLVkoYzVy-cczUy6XA9GEm2uXQ4m0C8Ihm">YouTube</a>]
         [<a href="https://soundcloud.com/rreplaymusic/sets/falling-through-frames">soundcloud</a>]
       </div>
-
-      <div class="featrackdiv">
-        featured track: <a href="music/rreplayWeSuppose.mp3"
-                           download="rreplayWeSuppose.mp3">We Suppose</a>
-        <!-- The download attribute is routinely ignored. As of 2016,
-        the "solution" was to add a header on the server side when the
-        resource is requested, so a request for the file will have
-        Content-Disposition: attachment; filename=rreplayWeSuppose.mp3
-        as a header.  The browser would then download it (maybe).
-        The core issue seems to be that browser capabilities are
-        increasingly integrated into the platform (phones/tablets),
-        and platform providers want to handle things like mp3 files as
-        they see best. Not going to win this with server hacks, so the
-        best solution is just to specify what should be done and hope
-        the browsers catch up.  When the user clicks and gets the page
-        with just the mp3 in it, they can File | Save As or the
-        equivalent.  Clunky, but so it goes. -->
-        <div class="trackaud" id="audiodiv">
-          <audio controls="controls" src="music/rreplayWeSuppose.mp3"></audio>
-        </div>
-      </div>
     </div>
   </div>
 
