@@ -90,6 +90,11 @@ var app = {},
         fontlink.rel = "stylesheet";
         fontlink.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(fontlink);
+        fontlink = document.createElement("link");
+        fontlink.href = "http://fonts.googleapis.com/css?family=Bangers";
+        fontlink.rel = "stylesheet";
+        fontlink.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(fontlink);
     }
 
 
