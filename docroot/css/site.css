@@ -44,7 +44,7 @@ A:hover {text-decoration: underline; color: #FF9900; background:black;}
 .linksdiv { padding:5px 0px 0px 0px; }
 .featrackdiv { padding:10px 0px 0px 0px; }
 .trackaud { padding:15px 0px 0px 0px; }
-#biodiv { padding:20px; width:60%; margin-right:auto; 
+#biodiv { padding:0px 20px; width:60%; margin-right:auto; 
   font-family: serif;
 }
 #personneldiv { padding:5px 0px; }

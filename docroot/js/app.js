@@ -106,6 +106,8 @@ var app = {},
         jtminjsDecorateWithUtilities(jt);
         addFontSupport();
         externalizeLinks();
+        setTimeout(function () {  //hide bio after site loaded
+            app.toggledivdisp("biodiv"); }, 200);
         displayContactInfo();
     };
 
