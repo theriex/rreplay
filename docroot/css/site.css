@@ -13,10 +13,10 @@ body {
   font-family: "Averia Libre", "Open Sans", "Helvetica", sans-serif;
 }
 
-A:link {text-decoration: none; color: #FF6600; background:black;}
-A:visited {text-decoration: none; color: #FF6600; background:black;}
-A:active {text-decoration: none; color: #FF6600; background:black;}
-A:hover {text-decoration: underline; color: #FF9900; background:black;}
+A:link {text-decoration:none; color:#FF6600; background:black;}
+A:visited {text-decoration:none; color:#FF6600; background:black;}
+A:active {text-decoration:none; color:#FF6600; background:black;}
+A:hover {text-decoration:underline; color:#FF9900; background:black;}
 
 #contentdiv { 
     padding:10px;
@@ -35,8 +35,10 @@ A:hover {text-decoration: underline; color: #FF9900; background:black;}
 #descriptdiv { font-size:x-large; }
 #descripspan { padding:0px 5px; font-size:medium; 
   background-image: url('../img/semisolidblack.png'); }
-#bandnamediv { padding:20px; font-size:xx-large; font-weight:bold;
+#navdiv { padding:0px 0px 20px 0px; 
   font-family: "Open Sans", "Helvetica", sans-serif; }
+.bandname { font-size:xx-large; font-weight:bold; }
+  
 .sectiondiv { font-size:medium; padding:10px 0px 10px 0px; }
 .albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
 .albumtitlespan { font-style:italic; background: black;
@@ -44,9 +46,8 @@ A:hover {text-decoration: underline; color: #FF9900; background:black;}
 .linksdiv { padding:5px 0px 0px 0px; }
 .featrackdiv { padding:10px 0px 0px 0px; }
 .trackaud { padding:15px 0px 0px 0px; }
-#biodiv { padding:0px 20px; width:60%; margin-right:auto; 
-  font-family: serif;
-}
+#biodiv { padding:0px 20px; width:80%; margin-right:auto; 
+  font-family: serif; background-image:url('../img/semisolidblack.png'); }
 #personneldiv { padding:5px 0px; }
 #waymusicdiv { padding:10px 0px; font-size:small; }
 .sectionheadspan { padding:0px 5px; color:black; background:cyan; }

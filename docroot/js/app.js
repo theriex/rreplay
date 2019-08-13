@@ -1,8 +1,8 @@
 /*global jtminjsDecorateWithUtilities, document, setTimeout */
-/*jslint browser, multivar, white, fudge, for */
+/*jslint browser, white, fudge, for, this */
 
-var app = {},
-    jt = {};
+var app = {};
+var  jt = {};
 
 (function () {
     "use strict";
@@ -49,14 +49,14 @@ var app = {},
 
 
     function displayContactInfo () {
-        var emaddr = "band",
-            site = "rreplay.com",
-            refs, html = [];
+        var emaddr = "band";
+        var site = "rreplay.com";
+        var html = [];
         emaddr = emaddr + "@" + site;
-        refs = [{text: "contact:"},
-                {text: " "},  //space breaker
-                {text: emaddr,
-                 href: "mailto:" + emaddr}];
+        var refs = [{text: "contact:"},
+                    {text: " "},  //space breaker
+                    {text: emaddr,
+                     href: "mailto:" + emaddr}];
         refs.forEach(function (ignore /*ref*/, index) {
             html.push(["span", {id: "dcrspan" + index, cla: "dcrspan"}]); });
         html.push(["span", {id: "dcorgspan"},
@@ -68,8 +68,9 @@ var app = {},
 
 
     function externalizeLinks () {
-        var i, link, links, href;
-        links = jt.byId("bodyid").getElementsByTagName("a");
+        var links = jt.byId("bodyid").getElementsByTagName("a");
+        var i;
+        var link;
         for(i = 0; i < links.length; i += 1) {
             link = links[i];
             if(link.href && link.href.indexOf("#") < 0) {
@@ -98,27 +99,49 @@ var app = {},
     }
 
 
+    function adjustNewsHeight () {
+        var h = jt.byId("contentdiv").offsetHeight;
+        jt.byId("newsdiv").style.height = String(h) + "px";
+    }
+
+
     ////////////////////////////////////////
     // application level functions
     ////////////////////////////////////////
+
+    app.selectContent = function (divid) {
+        var pgs = [{divid:"biodiv", name:"rreplay", cla:"bandname"},
+                   {divid:"musicdiv", name:"glitch&nbsp;jam", cla:"normal"},
+                   {divid:"newsdiv", name:"news", cla:"normal"}];
+        var sep = "&nbsp;&nbsp;&nbsp;&nbsp;";
+        var html = [];
+        pgs.forEach(function (pg, idx) {
+            if(pg.divid !== divid) {
+                jt.byId(pg.divid).style.display = "none";
+                html.push(["a", {href:"#" + pg.name,
+                                 onclick:jt.fs("app.selectContent('" + 
+                                               pg.divid + "')")},
+                           ["span", {cla:pg.cla}, pg.name]]); }
+            else {
+                jt.byId(pg.divid).style.display = "block";
+                html.push(["span", {cla:pg.cla}, pg.name]); }
+            if(idx < pgs.length - 1) {
+                html.push(sep); } });
+        jt.out("navdiv", jt.tac2html(html));
+    };
+
 
     app.init = function () {
         jtminjsDecorateWithUtilities(jt);
         addFontSupport();
         externalizeLinks();
-        setTimeout(function () {  //hide bio after site loaded
-            app.toggledivdisp("biodiv"); }, 200);
+        var params = jt.parseParams();
+        if(params.view === "news") {
+            app.selectContent("newsdiv"); }
+        else {
+            app.selectContent("musicdiv"); }
         displayContactInfo();
-    };
-
-
-    app.toggledivdisp = function (divid) {
-        var div = jt.byId(divid);
-        if(div) {
-            if(div.style.display === "block") {
-                div.style.display = "none"; }
-            else {
-                div.style.display = "block"; } }
+        adjustNewsHeight();
     };
 
 
