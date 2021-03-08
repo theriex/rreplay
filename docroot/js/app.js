@@ -111,8 +111,8 @@ var  jt = {};
 
     app.selectContent = function (divid) {
         var pgs = [{divid:"biodiv", name:"rreplay", cla:"bandname"},
-                   {divid:"musicdiv", name:"glitch&nbsp;jam", cla:"normal"},
-                   {divid:"newsdiv", name:"news", cla:"normal"}];
+                   {divid:"musicdiv", name:"glitch&nbsp;jam", cla:"normal"}];
+                   //{divid:"newsdiv", name:"news", cla:"normal"}];
         var sep = "&nbsp;&nbsp;&nbsp;&nbsp;";
         var html = [];
         pgs.forEach(function (pg, idx) {
