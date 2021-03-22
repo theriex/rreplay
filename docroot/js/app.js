@@ -99,12 +99,6 @@ var  jt = {};
     }
 
 
-    function adjustNewsHeight () {
-        var h = jt.byId("contentdiv").offsetHeight;
-        jt.byId("newsdiv").style.height = String(h) + "px";
-    }
-
-
     ////////////////////////////////////////
     // application level functions
     ////////////////////////////////////////
@@ -133,6 +127,7 @@ var  jt = {};
 
     app.init = function () {
         jtminjsDecorateWithUtilities(jt);
+        jt.log("window.innerWidth: " + window.innerWidth);
         addFontSupport();
         externalizeLinks();
         var params = jt.parseParams();
@@ -141,7 +136,6 @@ var  jt = {};
         else {
             app.selectContent("musicdiv"); }
         displayContactInfo();
-        adjustNewsHeight();
     };
 
 

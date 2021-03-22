@@ -24,6 +24,7 @@ A:hover {text-decoration:underline; color:#FF9900; background:black;}
     margin:auto;
 }
 
+.linkico { max-height:14px; }
 .albumdiv { display:table; }
 .albumcontentdiv { display:table-row; }
 .coverdiv { display:table-cell; width:150px; height:150px; }
@@ -43,7 +44,7 @@ A:hover {text-decoration:underline; color:#FF9900; background:black;}
 .albumtitlediv { padding:10px 0px 0px 0px; font-size:x-large; }
 .albumtitlespan { font-style:italic; background: black;
   font-family: "Open Sans", "Helvetica", sans-serif; }
-.linksdiv { padding:5px 0px 0px 0px; }
+.linksdiv { padding:5px 0px 0px 0px; font-size:small; line-height:1.7em; }
 .featrackdiv { padding:10px 0px 0px 0px; }
 .trackaud { padding:15px 0px 0px 0px; }
 #biodiv { padding:0px 20px; width:80%; margin-right:auto; 
