@@ -18,6 +18,8 @@ A:visited {text-decoration:none; color:#FF6600; background:black;}
 A:active {text-decoration:none; color:#FF6600; background:black;}
 A:hover {text-decoration:underline; color:#FF9900; background:black;}
 
+img { vertical-align:middle; }
+
 #contentdiv { 
     padding:10px;
     width:90%;
