@@ -55,3 +55,7 @@ img { vertical-align:middle; }
 #waymusicdiv { padding:10px 0px; font-size:small; }
 .sectionheadspan { padding:0px 5px; color:black; background:cyan; }
 
+.merchlink:link { background:transparent; }
+.merchlink:visited { background:transparent; }
+.merchlink:active { background:transparent; }
+.merchlink img { height:24px; vertical-align:text-bottom; }
