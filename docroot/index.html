@@ -37,22 +37,31 @@ the way. </p>
 
 </div> <!-- biodiv -->
 
-<!-- iTunes links to Apple Music so don't need both.  Prefer purchase. -->
 <div id="musicdiv">
   <!-- https://www.youtube.com/channel/UCNc8_IiAWrv-gEqM0Prb-yw -->
   <table><tr>
-    <td valign="top"><div class="coverdiv"><img src="img/manifest.jpg"/></div></td>
+    <td valign="top">
+      <div class="playdiv" id="manifest">
+        <div class="coverdiv"><img src="img/manifest.jpg"/></div></div></td>
     <td><div class="albdetdiv">
       <div class="albumyeardiv">2022</div>
-      <div class="linksdiv">
-        <a href="https://rreplay.bandcamp.com/album/live-at-manifest">preview/buy</a>
+      <div class="linksdiv"><span class="strownspan">Stream &#x27a1;</span>
+      [<a href="https://open.spotify.com/album/3pgZgZnp0NhgNTQkLeP9gU">Spotify</a>]
+      [<a href="https://www.youtube.com/playlist?list=OLAK5uy_n3wP0X03zBl04EFJSoUdlAlDn-8XbVz-4">YouTube</a>]
+      </div>
+      <div class="linksdiv"><span class="strownspan">Own &#x27a1;</span>
+      [<a href="https://rreplay.bandcamp.com/album/live-at-manifest">Bandcamp</a>]
+      [<a href="https://www.amazon.com/music/player/albums/B0B4ZBM1GR">Amazon</a>]
+      [<a href="https://music.apple.com/us/album/live-at-manifest/1632379708">Apple</a>]
       </div></td>
     </tr></table>
 
 <div id="musicdiv">
   <!-- https://www.youtube.com/channel/UCNc8_IiAWrv-gEqM0Prb-yw -->
   <table><tr>
-    <td valign="top"><div class="coverdiv"><img src="img/rrepost300.png"/></div></td>
+    <td valign="top">
+      <div class="playdiv", id="rrepost">
+        <div class="coverdiv"><img src="img/rrepost300.png"/></div></div></td>
     <td><div class="albdetdiv">
       <div class="albumyeardiv">2021
         <a class="merchlink" href="https://rreplay.myspreadshop.com/rrepost+-+rreplay?idea=60858233660ca11715f3c6c3">
@@ -64,13 +73,16 @@ the way. </p>
       <div class="linksdiv"><span class="strownspan">Own &#x27a1;</span>
       [<a href="https://rreplay.bandcamp.com/album/rrepost">Bandcamp</a>]
       [<a href="https://www.amazon.com/rrepost-rreplay/dp/B08YFLRJ88">Amazon</a>]
-      [<a href="https://music.apple.com/us/album/rrepost/1557505215">iTunes</a>]
+      [<a href="https://music.apple.com/us/album/rrepost/1557505215">Apple</a>]
       </div></td>
     </tr></table>
 
 <div id="musicdiv">
   <table><tr>
-    <td valign="top"><div class="coverdiv"><img src="img/FallingThroughFrames.jpg"/></div></td>
+    <td valign="top">
+      <div class="playdiv", id="falling">
+        <div class="coverdiv"><img src="img/FallingThroughFrames.jpg"/></div>
+    </div></td>
     <td><div class="albdetdiv">
       <div class="albumyeardiv">2016
         <a class="merchlink" href="https://rreplay.myspreadshop.com/falling+through+frames+-+rreplay?idea=6084c624eda74b3eb24a9c81">
@@ -82,12 +94,15 @@ the way. </p>
       <div class="linksdiv"><span class="strownspan">Own &#x27a1;</span>
       [<a href="https://rreplay.bandcamp.com/album/falling-through-frames">Bandcamp</a>]
       [<a href="https://www.amazon.com/Falling-Through-Frames-rreplay/dp/B01KIKFR9A">Amazon</a>]
-      [<a href="https://itunes.apple.com/us/album/falling-through-frames/1143896523">iTunes</a>]
+      [<a href="https://itunes.apple.com/us/album/falling-through-frames/1143896523">Apple</a>]
       </div></td>
     </tr></table>
 
   <table><tr>
-    <td valign="top"><div class="coverdiv"><img src="img/LiveFromTheUncannyValley.jpg"/></div></td>
+    <td valign="top">
+      <div class="playdiv", id="uncanny">
+        <div class="coverdiv"><img src="img/LiveFromTheUncannyValley.jpg"/>
+    </div></div></td>
     <td><div class="albdetdiv">
       <div class="albumyeardiv">2015
         <a class="merchlink" href="https://rreplay.myspreadshop.com/rreplay+uncanny+valley?idea=6099720c5454db222027f2b3">
@@ -99,7 +114,7 @@ the way. </p>
       <div class="linksdiv"><span class="strownspan">Own &#x27a1;</span>
         [<a href="https://rreplay.bandcamp.com/album/live-from-the-uncanny-valley">Bandcamp</a>]
         [<a href="https://www.amazon.com/Live-Uncanny-Valley-rreplay/dp/B00X0U85YK">Amazon</a>]
-        [<a href="https://itunes.apple.com/us/album/live-from-the-uncanny-valley/990831746">iTunes</a>]
+        [<a href="https://itunes.apple.com/us/album/live-from-the-uncanny-valley/990831746">Apple</a>]
       </div></td>
     </tr></table>
 
@@ -114,7 +129,7 @@ the way. </p>
       </div>
       <div class="linksdiv"><span class="strownspan">Own &#x27a1;</span>
         [<a href="https://www.amazon.com/Rrepertoire-rreplay/dp/B0036I9E0A">Amazon</a>]
-        [<a href="https://itunes.apple.com/us/album/rrepertoire/331431426">iTunes</a>]
+        [<a href="https://itunes.apple.com/us/album/rrepertoire/331431426">Apple</a>]
       </div></td>
     </tr></table>
 
@@ -150,6 +165,17 @@ the way. </p>
 <script src="js/app.js"></script>
 
 <script>
+  app.albums = {
+      manifest:{img:"manifest.jpg", bcaid:"1880376909",
+                bcalnk:"live-at-manifest", lnkname:"Live at Manifest"},
+      rrepost:{img:"rrepost300.png", bcaid:"1796378732",
+               bcalnk:"rrepost", lnkname:"rrepost"},
+      falling:{img:"FallingThroughFrames.jpg", bcaid:"379311088",
+               bcalnk:"falling-through-frames",
+               lnkname:"Falling Through Frames"},
+      uncanny:{img:"LiveFromTheUncannyValley.jpg", bcaid:"1469531730",
+               bcalnk:"live-from-the-uncanny-valley",
+               lnkname:"Live from the Uncanny Valley"}};
   app.init();
 </script>
 

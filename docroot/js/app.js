@@ -1,5 +1,5 @@
 /*global jtminjsDecorateWithUtilities, document, setTimeout */
-/*jslint browser, white, fudge, for, this */
+/*jslint browser, white, unordered, for, this */
 
 var app = {};
 var  jt = {};
@@ -53,10 +53,10 @@ var  jt = {};
         var site = "rreplay.com";
         var html = [];
         emaddr = emaddr + "@" + site;
-        var refs = [{text: "contact:"},
-                    {text: " "},  //space breaker
-                    {text: emaddr,
-                     href: "mailto:" + emaddr}];
+        const refs = [{text: "contact:"},
+                      {text: " "},  //space breaker
+                      {text: emaddr,
+                       href: "mailto:" + emaddr}];
         refs.forEach(function (ignore /*ref*/, index) {
             html.push(["span", {id: "dcrspan" + index, cla: "dcrspan"}]); });
         html.push(["span", {id: "dcorgspan"},
@@ -76,6 +76,21 @@ var  jt = {};
             if(link.href && link.href.indexOf("#") < 0) {
                 link.href = "#" + link.href;
                 jt.on(link, "click", app.openWindowLink); } }
+    }
+
+
+    function activatePlayDivs () {
+        var divs = document.getElementsByClassName("playdiv");
+        var i; var div; var def;
+        for(i = 0; i < divs.length; i += 1) {
+            div = divs[i];
+            def = app.albums[div.id];
+            if(def && def.bcaid) {
+                jt.out(div.id, jt.tac2html(
+                    ["a", {href:"#preview", onclick:jt.fs("app.bcembed('" +
+                                                          div.id + "')")},
+                     ["div", {cla:"coverdiv"},
+                      ["img", {src:"img/" + def.img}]]])); } }
     }
 
 
@@ -130,7 +145,8 @@ var  jt = {};
         jt.log("window.innerWidth: " + window.innerWidth);
         addFontSupport();
         externalizeLinks();
-        var params = jt.parseParams();
+        activatePlayDivs();
+        const params = jt.parseParams();
         if(params.view === "news") {
             app.selectContent("newsdiv"); }
         else {
@@ -146,6 +162,19 @@ var  jt = {};
         jt.evtend(event);
     };
 
+
+    app.bcembed = function (aid) {
+        var def = app.albums[aid];
+        jt.out(aid, jt.tac2html(
+            ["iframe", {style:"border: 0; width: 350px; height: 470px;",
+                        src:"https://bandcamp.com/EmbeddedPlayer/album=" +
+                            def.bcaid +
+                            "/size=large/bgcol=333333/linkcol=ff9900" +
+                            "/tracklist=false/transparent=true/",
+                        seamless:"seamless"},
+             ["a", {href:"https://rreplay.bandcamp.com/album/" + def.bcalnk},
+              def.lnkname]]));
+    };
 
 } () );
 
